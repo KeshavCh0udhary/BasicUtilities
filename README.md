@@ -1,1 +1,1 @@
-# This repositry is consists of the code that i teach.
+# The repository consists of the code that I use to give example while teaching.
