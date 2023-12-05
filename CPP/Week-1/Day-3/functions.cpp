@@ -1,8 +1,9 @@
 #include <iostream>
-int add(int a,int b);
+int add(int a, int b);
 
-void Days(int day){
-    
+void Days(int day)
+{
+
     enum Days
     {
         MONDAY,
@@ -47,11 +48,12 @@ void Days(int day){
 
     return;
 }
- 
-int main(){
-    
+
+int main()
+{
+
     int a = 10;
     int b = 11;
-   
-    std::cout<<  add(a,b);
+
+    std::cout << add(a, b);
 }
