@@ -30,6 +30,23 @@ int findMax(int arr[],int n){
    
 }
 
+int findSecondMax(int arr[],int n){
+    
+    int max = arr[0];
+    int sMax = max; 
+    for(int i=0; i<n; i++){
+        if(max < arr[i]){
+            max = arr[i];
+        }
+        if(sMax < arr[i] && arr[i] < max){
+            sMax = arr[i];
+        }
+    }
+    
+    return sMax;
+   
+}
+
 int main(){
     int n;
     std::cin>>n;
@@ -39,5 +56,6 @@ int main(){
     }
 
     std::cout<<findMax(arr,n)<<"\n";
-    std::cout<<findMin(arr,n);
+    std::cout<<findMin(arr,n)<<"\n";
+    std::cout<<findSecondMax(arr,n)<<"\n";
  }
