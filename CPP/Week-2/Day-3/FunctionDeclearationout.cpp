@@ -19,6 +19,10 @@ class Square{
        a = copy.a;
     }
 
+    ~Square(){
+      std::cout << "Destroyed" << std::endl;
+    }
+    
     void print();
 
 };
