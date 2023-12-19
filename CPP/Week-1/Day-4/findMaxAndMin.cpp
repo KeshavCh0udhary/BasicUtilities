@@ -36,9 +36,9 @@ int findSecondMax(int arr[],int n){
     int sMax = max; 
     for(int i=0; i<n; i++){
         if(max < arr[i]){
+             sMax = max;
             max = arr[i];
-        }
-        if(sMax < arr[i] && arr[i] < max){
+        }else if(sMax < arr[i]){
             sMax = arr[i];
         }
     }

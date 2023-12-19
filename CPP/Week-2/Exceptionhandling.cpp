@@ -1,10 +1,11 @@
 #include<iostream>
-/*
+#include <fstream>
+
 class FileHandling {
 	public:
 		void writeInFile(const char* file_name, const char* data) {
 			std::ofstream fout;
-			fout.open(file_name,std::ios::app);
+			fout.open(file_name,std::ios::in);
 			fout << data << "\n";
 			fout.close();
 	    }
@@ -27,7 +28,7 @@ class FileHandling {
 			fin.close();
 		}
 };
-*/
+
 class InvalidInputException : public std::exception {
 public:
     explicit InvalidInputException(const char* m) : message(m) {}
@@ -94,3 +95,34 @@ int main() {
     }
 
 }
+
+class Person { 
+	private: std::string name;
+	int age; 
+	protected: 
+	void setName(std::string n) {
+		 name = n; 
+	} 
+	std::string getName() {
+		 return name; 
+	} 
+	void setAge(int a) {
+		 age = a; 
+	} 
+	int getAge() {
+		 return age; 
+		 
+	} 
+}; 
+class Employee : public Person {
+	private: double salary; 
+	public: 
+	void setEmployee(std::string n, int a, double s) {
+		setName(n); 
+		setAge(a); 
+		salary = s; 
+	} 
+	void showEmployee() {
+			std::cout << getName() << ", " << getAge() << ", $" << salary << std::endl; 
+	} 
+};
