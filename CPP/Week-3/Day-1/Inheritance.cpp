@@ -6,10 +6,10 @@ class Vechicle{
    protected:
    int c;
    public:
-   bool isRunning(){
+  bool isRunning(){
        return true;
-   }
-   virtual void makeSound(){
+  }
+  virtual void makeSound(){
        std::cout<<"Pee pee\n";
    }
    bool isEcoFriendly(){
@@ -22,7 +22,7 @@ class Vechicle{
 class Car : public Vechicle{
     int d;
     public:
-    void makeSound() override{
+    void makeSound(){
        std::cout<<"poo poo\n";
     }
 
@@ -53,8 +53,8 @@ class BMW : protected Car{
 
 
 int main(){
-  Car v1;
-  v1.makeSound();
+  Vechicle* v1 = new Car(); 
+  v1->makeSound();
 }
 
 /*
